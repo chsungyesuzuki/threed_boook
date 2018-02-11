@@ -10,15 +10,15 @@ public class Press {
 		this.name = name;
 		this.pressNumber = pressNumber;
 	}
-	public static Press getInstanceAndCreateNew(String name,String pressNumber) {
-		Press result = new Press(name,pressNumber);
+	public static Press getInstanceAndCreateNew(String name, String pressNumber) {
+		Press result = new Press(name, pressNumber);
 		presses.put(result, pressNumber);
 		return result;
 	}
 	public static String getNumberInPress(Press press) {
 		return presses.get(press);
 	}
-	public ISBN getISBNInBookNumberInPress(String country,String other) {
+	public ISBN getISBNInBookNumberInPress(String country, String other) {
 		String iSBNFront = "978" + country + Press.getNumberInPress(this) + other;
 		String iSBNBack = ISBN.getBack(iSBNFront);
 		String iSBN = iSBNFront + iSBNBack;

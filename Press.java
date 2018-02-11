@@ -1,5 +1,4 @@
 package chsungyesuzuki;
-import chsungyesuzuki.ISBN;
 
 public class Press {
 	private String name;

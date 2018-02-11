@@ -1,6 +1,7 @@
 package chsungyesuzuki;
 import chsungyesuzuki.BitsException;
 import chsungyesuzuki.Util;
+
 public final class ISBNManager {
 	public static String getBack(String front) {
 		int back;

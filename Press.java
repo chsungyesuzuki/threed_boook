@@ -10,6 +10,6 @@ public class Press {
 	} 
 	
 	public String toString() {
-		return getName();
+		return name;
 	}
 }

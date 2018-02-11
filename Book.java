@@ -14,7 +14,7 @@ public class Book {
 	public float price;
 	public Book(){
 	}
-	public Book(String name,String author,Location location) {
+	public Book(String name, String author, Location location) {
 		this.name = name;
 		this.author = author;
 		this.location = location;

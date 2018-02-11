@@ -2,6 +2,7 @@ package chsungyesuzuki;
 import java.util.Map;
 import java.util.HashMap;
 import chsungyesuzuki.Press;
+import chsungyesuzuki.ISBN;
 
 public final class PressManager {
 	private static Map<Press, String> presses = new HashMap();

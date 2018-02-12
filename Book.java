@@ -1,5 +1,4 @@
 package chsungyesuzuki;
-
 import chsungyesuzuki.Press;
 import chsungyesuzuki.Location;
 import java.util.Calendar;

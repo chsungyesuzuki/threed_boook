@@ -1,11 +1,10 @@
-package chsungyesuzuki;
+package chsungyesuzuki.util;
 import chsungyesuzuki.BitsException;
-import chsungyesuzuki.Util;
-
-public final class ISBNManager {
-	public static String getBack(String front) {
+public final class ISBNUtil{
+	
+	public static String getBack(String front){
 		int back;
-		int[] frontInteger = chsungyesuzuki.Util.getIntegerArrayFromString(front);
+		int[] frontInteger = chsungyesuzuki.util.Util.getIntegerArrayFromString(front);
 		return group(frontInteger);
 	}
 	
@@ -21,7 +20,7 @@ public final class ISBNManager {
 		return result;
 	}
 	
-	private static String getBackInThirteen(int[] front) {
+	private static String getBackInThirteen(int[] front){
 		int result;
 		int[] poweredFront = new int[front.length];
 		for(int i = 0;i < front.length;i ++) {
@@ -29,7 +28,7 @@ public final class ISBNManager {
 			poweredFront[i] = front[i] * power;
 		}
 		int temp = 0;
-		for(int i : poweredFront) {
+		for(int i : poweredFront){
 			temp += i;
 		}
 		result = 10 - (temp % 10);
@@ -38,7 +37,7 @@ public final class ISBNManager {
 		else
 			return String.valueOf(result);
 	}
-	private static int getPowerInThirteen(int i) {
+	private static int getPowerInThirteen(int i){
 		int iPercentTwo = i % 2;
 		boolean iIsBima = iPercentTwo == 0;
 		int power;
@@ -49,15 +48,15 @@ public final class ISBNManager {
 		return power;
 	}
 	
-	private static String getBackInTen(int[] front) {
+	private static String getBackInTen(int[] front){
 		int result;
 		int[] poweredFront = new int[front.length];
-		for(int i = 0;i < front.length;i ++) {
+		for(int i = 0;i < front.length;i ++){
 			int power = getPowerInTen(i);
 			poweredFront[i] = front[i] * power;
 		}
 		int temp = 0;
-		for(int i : poweredFront) {
+		for(int i : poweredFront){
 			temp += i;
 		}
 		result = 11 - (temp % 11);
@@ -68,7 +67,7 @@ public final class ISBNManager {
 		else
 			return String.valueOf(result);
 	}
-	private static int getPowerInTen(int i) {
+	private static int getPowerInTen(int i){
 		int result;
 		result = 10 - i;
 		return result;

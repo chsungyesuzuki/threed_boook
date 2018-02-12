@@ -1,14 +1,13 @@
-package chsungyesuzuki;
+package chsungyesuzuki.util;
 import java.util.Map;
 import java.util.HashMap;
 import chsungyesuzuki.Press;
-import chsungyesuzuki.ISBN;
-import chsungyesuzuki.ISBNManager;
+import chsungyesuzuki.util.ISBNUtil;
 
-public final class PressManager {
+public final class PressUtil{
 	private static Map<Press, String> presses = new HashMap();
 	
-	private PressManager() {
+	private PressUtil(){
 	}
 	
 	public static Press getInstanceAndCreateNew(String name, String pressNumber) {
@@ -24,11 +23,10 @@ public final class PressManager {
 		return presses.get(press);
 	}
 	
-	public static ISBN getISBNInBookNumberInPress(Press press, String country, String other) {
+	public static String getISBNInBookNumberInPress(Press press, String country, String other) {
 		String iSBNFront = "978" + country + getNumberInPress(press) + other;
 		String iSBNBack = ISBNManager.getBack(iSBNFront);
-		String iSBN = iSBNFront + iSBNBack;
-		ISBN result = new ISBN(iSBN);
+		String result = iSBNFront + iSBNBack;
 		return result;
 	}
 }

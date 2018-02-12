@@ -1,9 +1,10 @@
 package chsungyesuzuki;
+
 import chsungyesuzuki.Press;
 import chsungyesuzuki.Location;
 import java.util.Calendar;
 
-public class Book {
+public class Book{
 	public String name;
 	public String author;
 	public Location location;
@@ -15,13 +16,13 @@ public class Book {
 	public Book(){
 	}
 	
-	public Book(String name, String author, Location location) {
+	public Book(String name, String author, Location location){
 		this.name = name;
 		this.author = author;
 		this.location = location;
 	}
 	
-	public String toString() {
+	public String toString(){
 		String result = new String();
 		result = "name:" + name + "author:" + author + "location:" + location.toString() + "ISBN:" + iSBN;
 		return result;

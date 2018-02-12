@@ -10,22 +10,22 @@ public final class PressUtil{
 	private PressUtil(){
 	}
 	
-	public static Press getInstanceAndCreateNew(String name, String pressNumber) {
+	public static Press getInstanceAndCreateNew(String name, String pressNumber){
 		Press result = new Press(name, pressNumber);
 		presses.put(result, pressNumber);
 		return result;
 	}
-	public static void remove(Press key) {
+	public static void remove(Press key){
 		presses.remove(key);
 	}
 	
-	public static String getNumberInPress(Press press) {
+	public static String getNumberInPress(Press press){
 		return presses.get(press);
 	}
 	
-	public static String getISBNInBookNumberInPress(Press press, String country, String other) {
+	public static String getISBNInBookNumberInPress(Press press, String country, String other){
 		String iSBNFront = "978" + country + getNumberInPress(press) + other;
-		String iSBNBack = ISBNManager.getBack(iSBNFront);
+		String iSBNBack = ISBNUtil.getBack(iSBNFront);
 		String result = iSBNFront + iSBNBack;
 		return result;
 	}

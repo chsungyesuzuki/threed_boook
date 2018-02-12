@@ -1,5 +1,4 @@
 package chsungyesuzuki;
-import chsungyesuzuki.ISBN;
 import chsungyesuzuki.Press;
 import chsungyesuzuki.Location;
 import java.util.Calendar;
@@ -9,7 +8,7 @@ public class Book {
 	public String author;
 	public Location location;
 	public byte edition;
-	public ISBN iSBN;
+	public String iSBN;
 	public Press press;
 	public Calendar date;
 	public float price;
@@ -24,7 +23,7 @@ public class Book {
 	
 	public String toString() {
 		String result = new String();
-		result = "name:" + name + "author:" + author + "location:" + location.toString() + "ISBN:" + iSBN.toString();
+		result = "name:" + name + "author:" + author + "location:" + location.toString() + "ISBN:" + iSBN;
 		return result;
 	}
 }

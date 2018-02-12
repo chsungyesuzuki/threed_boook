@@ -1,15 +1,15 @@
 package chsungyesuzuki;
 
-public class Press {
+public class Press{
 	private String name;
 	private String pressNumber;
 	
-	public Press(String name, String pressNumber) {
+	public Press(String name, String pressNumber){
 		this.name = name;
 		this.pressNumber = pressNumber;
 	} 
 	
-	public String toString() {
+	public String toString(){
 		return name;
 	}
 }

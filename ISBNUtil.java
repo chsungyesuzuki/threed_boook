@@ -1,5 +1,5 @@
 package chsungyesuzuki.util;
-import chsungyesuzuki.BitsException;
+import chsungyesuzuki.util.BitOutOfBoundsException;
 public final class ISBNUtil{
 	
 	public static String getBack(String front){
@@ -16,7 +16,7 @@ public final class ISBNUtil{
 		else if(frontIntegerLength == 9) 
 			result = getBackInTen(frontInteger);
 		else 
-			throw new BitsException(frontIntegerLength);
+			throw new BitOutOfBoundsException(frontIntegerLength);
 		return result;
 	}
 	

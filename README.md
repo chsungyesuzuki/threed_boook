@@ -1,2 +1,3 @@
 # threed_boook
-an item in java
+Please DO NOT rewrite RANDOMLY.
+thanks.

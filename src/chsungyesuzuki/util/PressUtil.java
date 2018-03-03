@@ -5,7 +5,7 @@ import chsungyesuzuki.Press;
 import chsungyesuzuki.util.ISBNUtil;
 
 public final class PressUtil{
-	private static Map<Press, String> presses = new HashMap();
+	private static Map<Press, String> presses = new HashMap<>();
 	
 	private PressUtil(){
 	}

@@ -3,7 +3,6 @@ import chsungyesuzuki.util.BitOutOfBoundsException;
 public final class ISBNUtil{
 	
 	public static String getBack(String front){
-		int back;
 		int[] frontInteger = chsungyesuzuki.util.Util.getIntegerArrayFromString(front);
 		return group(frontInteger);
 	}
